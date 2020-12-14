@@ -26,10 +26,7 @@ def move(commd, steps):
     elif commd == 'F':
         pos[0] = curr_E_W + (curr_wayp_E_W * steps)
         pos[1] = curr_N_S + (curr_wayp_N_S * steps)
-    # print(commd, steps)
-    # print(f'wp:{wayp}')
-    # print(f'p:{pos}')
-
+ 
 
 read_file = open('input.txt', 'r', encoding='utf-8')
 clean_file = list(map(str,read_file.read().split('\n')))
@@ -49,8 +46,6 @@ for command, stepping in data:
             elif command == 'R':
                 wayp[0] = curr_N_S
                 wayp[1] = curr_E_W - (curr_E_W * 2)
-        # print(command, stepping)
-        # print(f'wp:{wayp}')
     else:
         move(command, stepping)
 
